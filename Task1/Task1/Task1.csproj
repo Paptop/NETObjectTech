@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Products\" />
+    <Folder Include="Factories\" />
+    <Folder Include="Products\Animation\" />
+    <Folder Include="Products\CheckBox\" />
+    <Folder Include="Products\Mesh\" />
+    <Folder Include="Products\Sprite\" />
+    <Folder Include="Products\Button\" />
+    <Folder Include="Factories\A\" />
+    <Folder Include="Factories\B-C\" />
+    <Folder Include="Factories\D-E\" />
+  </ItemGroup>
+</Project>
