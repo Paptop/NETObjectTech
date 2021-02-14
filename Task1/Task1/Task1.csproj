@@ -16,5 +16,6 @@
     <Folder Include="Factories\A\" />
     <Folder Include="Factories\B-C\" />
     <Folder Include="Factories\D-E\" />
+    <Folder Include="Creators\" />
   </ItemGroup>
 </Project>

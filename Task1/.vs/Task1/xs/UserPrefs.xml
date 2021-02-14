@@ -1,33 +1,23 @@
 ﻿<Properties StartupConfiguration="{76C84058-ECBC-45BD-BAE8-FD602ECD1C34}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Task1/Products/Button/Button2D.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Task1/README.txt">
     <Files>
-      <File FileName="Task1/README.txt" Line="13" Column="67" />
-      <File FileName="Task1/Products/EmptyNode.cs" Line="16" Column="10" />
-      <File FileName="Task1/Products/Mesh/IMesh.cs" Line="1" Column="1" />
-      <File FileName="Task1/Products/IClone.cs" Line="7" Column="10" />
-      <File FileName="Task1/Products/Mesh/Mesh3D.cs" Line="1" Column="1" />
-      <File FileName="Task1/Products/Mesh/Mesh2D.cs" Line="1" Column="1" />
-      <File FileName="Task1/Products/Button/IButton.cs" Line="1" Column="1" />
-      <File FileName="Task1/Products/Button/Button3D.cs" Line="1" Column="1" />
-      <File FileName="Task1/Products/Button/Button2D.cs" Line="1" Column="1" />
+      <File FileName="Task1/README.txt" Line="21" Column="77" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Task1" expanded="True">
             <Node name="Task1" expanded="True">
+              <Node name="Creators" expanded="True" />
               <Node name="Factories" expanded="True">
                 <Node name="A" expanded="True" />
                 <Node name="B-C" expanded="True" />
                 <Node name="D-E" expanded="True" />
               </Node>
               <Node name="Products" expanded="True">
-                <Node name="Animation" expanded="True" />
-                <Node name="Button" expanded="True">
-                  <Node name="Button2D.cs" selected="True" />
-                </Node>
                 <Node name="Mesh" expanded="True" />
               </Node>
+              <Node name="README.txt" selected="True" />
             </Node>
           </Node>
         </State>

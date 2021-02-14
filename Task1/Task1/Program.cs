@@ -16,6 +16,9 @@ namespace Task1
     {
         static void Main(string[] args)
         {
+            IFactory fac0 = new AnimFactory2D();
+            IFactory fac1 = new AnimFactory3D();
+
             Console.WriteLine("Hello World!");
             IFactory factory = new ButtonCheckBoxFactory<Button2D, CheckBox3D>();
             System.Console.WriteLine(factory.CreateCheckBox());
