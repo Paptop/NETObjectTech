@@ -17,6 +17,8 @@ namespace Task1
     {
         static void Main(string[] args)
         {
+            Test test = new Test();
+            /*
             IFactory fac0 = new AnimFactory2D();
             IFactory fac1 = new AnimFactory3D();
             IFactory factory = new ButtonCheckBoxFactory<Button2D, CheckBox3D>();
@@ -52,6 +54,7 @@ namespace Task1
             });
 
             System.Console.Write(sprite2d);
+            */
         }
     }
 }

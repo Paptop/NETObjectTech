@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Numerics;
+
 namespace Task1
 {
     public class Vec2
@@ -30,6 +32,26 @@ namespace Task1
         public override String ToString()
         {
             return $"Vec2( x: {_x}, y: {_y})\n";
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            float epsilon = 0.01f;
+
+            if(!(obj is Vec2))
+            {
+                return false;
+            }
+
+            Vec2 v = (Vec2)obj;
+
+            return Math.Abs(v.x - _x) < epsilon &&
+                   Math.Abs(v.y - _y) < epsilon;
         }
     }
 }

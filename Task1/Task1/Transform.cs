@@ -36,5 +36,24 @@ namespace Task1
         {
             return $"Transform3D\n Pos: {_pos} Rot: {_rot} Scale: {_scale}";
         }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+
+        public override bool Equals(object obj)
+        {
+            if( !(obj is Transform))
+            {
+                return false;
+            }
+
+            Transform trs = (Transform)obj;
+            return _pos.Equals(trs.Pos) &&
+                   _rot.Equals(trs.Rot) &&
+                   _scale.Equals(trs.Scale);
+        }
     }
 }
