@@ -17,7 +17,6 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            /*
             IFactory fac0 = new AnimFactory2D();
             IFactory fac1 = new AnimFactory3D();
             IFactory factory = new ButtonCheckBoxFactory<Button2D, CheckBox3D>();
@@ -44,8 +43,8 @@ namespace Task1
 
 
             System.Console.Write(sprite);
-            System.Console.Write(sprite3D);*/
-            CreatorFactory fac4 = new CreatorFactory();
+            System.Console.Write(sprite3D);
+
             object sprite2d = fac4.Assemble(typeof(Sprite2D), new Hashtable()
             {
                 { "pos", new Vec2(0.1f, 0.1f) },
