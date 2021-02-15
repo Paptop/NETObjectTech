@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections;
+
+using Task1.Products;
+
 namespace Task1.Creators
 {
     public class ConcreteCreator<Type,ConcreteType> : Creator<Type>
@@ -9,9 +13,12 @@ namespace Task1.Creators
         {
         }
 
-        public override Type Create()
+        public override Type Create(Hashtable param)
         {
-            return new ConcreteType();
+            ConcreteType obj = new ConcreteType();
+            IInitializable iobj = (IInitializable)obj;
+            iobj.Init(param);
+            return obj;
         }
     }
 }

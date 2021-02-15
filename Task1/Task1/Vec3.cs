@@ -27,5 +27,10 @@ namespace Task1
         {
             _x = 0.0f; _y = 0.0f; _z = 0.0f;
         }
+
+        public override String ToString()
+        {
+            return $"Vec3( x: {_x}, y: {_y}, z: {_z})\n";
+        }
     }
 }

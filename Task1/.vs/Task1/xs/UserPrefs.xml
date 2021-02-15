@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{76C84058-ECBC-45BD-BAE8-FD602ECD1C34}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Task1/README.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Task1/Program.cs">
     <Files>
       <File FileName="Task1/README.txt" Line="21" Column="77" />
+      <File FileName="Task1/Program.cs" Line="38" Column="16" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,15 +10,9 @@
           <Node name="Task1" expanded="True">
             <Node name="Task1" expanded="True">
               <Node name="Creators" expanded="True" />
-              <Node name="Factories" expanded="True">
-                <Node name="A" expanded="True" />
-                <Node name="B-C" expanded="True" />
-                <Node name="D-E" expanded="True" />
-              </Node>
-              <Node name="Products" expanded="True">
-                <Node name="Mesh" expanded="True" />
-              </Node>
-              <Node name="README.txt" selected="True" />
+              <Node name="Factories" expanded="True" />
+              <Node name="Products" expanded="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>

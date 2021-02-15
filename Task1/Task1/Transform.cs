@@ -1,7 +1,9 @@
 ﻿using System;
+using Task1.Products;
+
 namespace Task1
 {
-    public class Transform
+    public class Transform : IClone<Transform>
     {
         public Vec3 Pos
         {
@@ -28,6 +30,11 @@ namespace Task1
             _pos = new Vec3();
             _rot = new Vec3();
             _scale = new Vec3();
+        }
+
+        public override String ToString()
+        {
+            return $"Transform3D\n Pos: {_pos} Rot: {_rot} Scale: {_scale}";
         }
     }
 }

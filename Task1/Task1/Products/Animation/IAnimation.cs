@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Task1.Products.Animation
 {
-    public interface IAnimation
+    public interface IAnimation : IInitializable
     {
     }
 }
