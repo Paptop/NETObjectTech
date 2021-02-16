@@ -14,6 +14,7 @@ namespace Task1.Products.Sprite
         public String Texture
         {
             get { return _texture;  }
+            set { _texture = value;  }
         }
         
         private Transform   _transform;
@@ -27,7 +28,8 @@ namespace Task1.Products.Sprite
 
         public void Init(Hashtable param)
         {
-            _transform = (Transform)param["transform"];
+            Transform trans = (Transform)param["transform"];
+            _transform = trans.Clone();
             _texture = (String)param["texture"];
         }
 

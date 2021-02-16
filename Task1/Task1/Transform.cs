@@ -32,6 +32,20 @@ namespace Task1
             _scale = new Vec3();
         }
 
+        public Transform(Vec3 pos, Vec3 rot, Vec3 scale)
+        {
+            _pos = pos;
+            _rot = rot;
+            _scale = scale;
+        }
+
+        public Transform Clone()
+        {
+            return new Transform(_pos.Clone(),
+                                 _rot.Clone(),
+                                 _scale.Clone());
+        }
+
         public override String ToString()
         {
             return $"Transform3D\n Pos: {_pos} Rot: {_rot} Scale: {_scale}";

@@ -1,7 +1,9 @@
 ﻿using System;
+using Task1.Products;
+
 namespace Task1
 {
-    public class Vec3
+    public class Vec3 : IClone<Vec3>
     {
         public float x
         {
@@ -26,6 +28,18 @@ namespace Task1
         public Vec3()
         {
             _x = 0.0f; _y = 0.0f; _z = 0.0f;
+        }
+
+        public Vec3(float x, float y, float z)
+        {
+            _x = x;
+            _y = y;
+            _z = z;
+        }
+
+        public Vec3 Clone()
+        {
+            return new Vec3(_x, _y, _z);
         }
 
         public override int GetHashCode()

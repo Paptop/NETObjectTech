@@ -22,13 +22,33 @@ namespace Task1
 
         public void Test_D_E()
         {
+            Transform trans = new Transform();
+            trans.Pos = new Vec3(0.1f, 0.2f, 0.3f);
+            trans.Rot = new Vec3(0.2f, 0.3f, 0.4f);
+            trans.Scale = new Vec3(1.0f, 1.0f, 1.0f);
+
+
             Mesh2D prototypeMesh = new Mesh2D();
             Sprite3D prototypeSprite = new Sprite3D();
 
-            IFactory fac = new MeshSpriteFactory(new Mesh2D(), new Sprite3D());
+            prototypeSprite.Init(new Hashtable
+            {
+                {"transform", trans},
+                {"texture", "House" }
+            });
+
+            IFactory fac = new MeshSpriteFactory(new Mesh2D(), prototypeSprite);
             ISprite sprite = fac.CreateSprite();
 
-            System.Console.WriteLine($"[TEST D-E] Testing clone factories D-E {sprite.Equals(prototypeSprite)}");
+            prototypeSprite.Texture = "Hello There";
+            trans.Scale = new Vec3(-1.0f, -1.0f, -1.0f);
+
+            bool AreEqual = sprite.Equals(prototypeSprite);
+
+            System.Console.WriteLine($"[TEST D-E] [{AreEqual.ToString().ToUpper()}]");
+
+            System.Console.Write(sprite);
+            System.Console.Write(prototypeSprite);
         }
     }
 }
