@@ -68,6 +68,7 @@ namespace Task1
             Test_B_C();
             Test_D_E_2D();
             Test_D_E_3D();
+            Test_Creator();
         }
 
         public void Test_A()
@@ -119,6 +120,28 @@ namespace Task1
             bool AreEqual = sprite.Equals(prototypeSprite3D);
             AreEqual &= mesh.Equals(prototypeMesh3D);
             System.Console.WriteLine($"[TEST D-E-3D] [{AreEqual.ToString().ToUpper()}]");
+        }
+
+        public void Test_Creator()
+        {
+            CreatorFactory fac = new CreatorFactory();
+
+            object sprite_0 = fac.Assemble(typeof(Sprite2D), new Hashtable()
+            {
+                { "pos", new Vec2(0.1f, 0.1f) },
+                { "rot", 0.1f},
+                { "texture", "Tree" },
+            });
+
+            object sprite_1 = fac.Assemble(typeof(Sprite2D), new Hashtable()
+            {
+                { "pos", new Vec2(0.1f, 0.1f) },
+                { "rot", 0.1f},
+                { "texture", "Tree" }
+            });
+
+            bool AreEqual = sprite_0.Equals(sprite_1);
+            System.Console.WriteLine($"[TEST CREATOR] [{AreEqual.ToString().ToUpper()}]");
         }
     }
 }
