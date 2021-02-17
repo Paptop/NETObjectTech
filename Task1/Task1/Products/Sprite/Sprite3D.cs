@@ -6,6 +6,9 @@ namespace Task1.Products.Sprite
 {
     public class Sprite3D : ISprite
     {
+        private Transform _transform;
+        private String _texture;
+
         public Transform Transform
         {
             get { return _transform; }
@@ -14,11 +17,7 @@ namespace Task1.Products.Sprite
         public String Texture
         {
             get { return _texture;  }
-            set { _texture = value;  }
         }
-        
-        private Transform   _transform;
-        private String      _texture;
 
         public Sprite3D()
         {
