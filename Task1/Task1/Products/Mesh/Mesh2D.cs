@@ -18,8 +18,17 @@ namespace Task1.Products.Mesh
 
         public void Init(Hashtable table)
         {
-            _points = new List<Vec2>((List<Vec2>)table["points"]);
-            _color = (Color)table["color"];
+            object points = null;
+            object color = null;
+
+            if ((points = table["points"]) != null)
+            {
+                _points = new List<Vec2>((List<Vec2>)points);
+            }
+            else if(((color = table["color"]) != null))
+            {
+                _color = (Color)color;
+            }
         }
 
         public IMesh Clone()

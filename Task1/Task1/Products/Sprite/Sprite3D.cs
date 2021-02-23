@@ -27,9 +27,19 @@ namespace Task1.Products.Sprite
 
         public void Init(Hashtable param)
         {
-            Transform trans = (Transform)param["transform"];
-            _transform = trans.Clone();
-            _texture = (String)param["texture"];
+            object transform = null;
+            object texture = null;
+
+            if ((transform = param["transform"]) != null)
+            {
+                Transform tr = (Transform)(transform);
+                _transform = tr.Clone();
+
+            }
+            else if ((texture = param["texture"]) != null)
+            {
+                _texture = (String)texture;
+            }
         }
 
         public ISprite Clone()

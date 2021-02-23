@@ -1,25 +1,24 @@
 ﻿<Properties StartupConfiguration="{76C84058-ECBC-45BD-BAE8-FD602ECD1C34}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Task1/Vec2.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Task1/Vec3.cs">
     <Files>
-      <File FileName="Task1/Products/Mesh/Mesh3D.cs" Line="2" Column="19" IsPinned="True" />
-      <File FileName="Task1/README.txt" Line="24" Column="120" />
-      <File FileName="Task1/Products/EmptyNode.cs" Line="1" Column="1" />
-      <File FileName="Task1/Test.cs" Line="107" Column="1" />
-      <File FileName="Task1/Factories/D-E/MeshSpriteFactory.cs" Line="25" Column="1" />
-      <File FileName="Task1/Transform.cs" Line="1" Column="1" />
-      <File FileName="Task1/Products/Sprite/Sprite3D.cs" Line="31" Column="26" />
-      <File FileName="Task1/Color.cs" Line="10" Column="21" />
-      <File FileName="Task1/Products/Mesh/IMesh.cs" Line="1" Column="1" />
-      <File FileName="Task1/Products/Sprite/ISprite.cs" Line="1" Column="1" />
-      <File FileName="Task1/Creators/ConcreteCreator.cs" Line="1" Column="1" />
-      <File FileName="Task1/Creators/Creator.cs" Line="1" Column="1" />
-      <File FileName="Task1/Factories/CreatorFactory.cs" Line="1" Column="1" />
-      <File FileName="Task1/Factories/IFactory.cs" Line="1" Column="1" />
-      <File FileName="Task1/Vec3.cs" Line="1" Column="1" />
-      <File FileName="Task1/Products/Mesh/Mesh2D.cs" Line="33" Column="25" NotebookId="1" />
-      <File FileName="Task1/Products/Sprite/Sprite2D.cs" Line="64" Column="1" NotebookId="1" />
-      <File FileName="Task1/Program.cs" Line="24" Column="1" NotebookId="1" />
-      <File FileName="Task1/Vec2.cs" Line="56" Column="1" NotebookId="1" />
+      <File FileName="Task1/Products/Animation/Anim2D.cs" Line="22" Column="42" />
+      <File FileName="Task1/Products/Animation/IAnimation.cs" Line="1" Column="1" />
+      <File FileName="Task1/Products/Animation/Anim3D.cs" Line="26" Column="1" />
+      <File FileName="Task1/Products/Mesh/Mesh3D.cs" Line="1" Column="1" />
+      <File FileName="Task1/Products/Mesh/Mesh2D.cs" Line="1" Column="1" />
+      <File FileName="Task1/Products/Sprite/Sprite2D.cs" Line="1" Column="1" />
+      <File FileName="Task1/Products/Button/IButton.cs" Line="1" Column="1" />
+      <File FileName="Task1/Program.cs" Line="63" Column="63" NotebookId="1" />
+      <File FileName="Task1/Products/Button/Button2D.cs" Line="12" Column="3" NotebookId="1" />
+      <File FileName="Task1/Products/IInitializable.cs" Line="10" Column="1" NotebookId="1" />
+      <File FileName="Task1/Products/Button/Button3D.cs" Line="12" Column="36" NotebookId="1" />
+      <File FileName="Task1/Test.cs" Line="73" Column="70" NotebookId="1" />
+      <File FileName="Task1/Products/Sprite/Sprite3D.cs" Line="78" Column="1" NotebookId="1" />
+      <File FileName="Task1/Products/CheckBox/CheckBox2D.cs" Line="14" Column="32" NotebookId="1" />
+      <File FileName="Task1/Products/CheckBox/CheckBox3D.cs" Line="14" Column="39" NotebookId="1" />
+      <File FileName="Task1/Transform.cs" Line="30" Column="29" NotebookId="1" />
+      <File FileName="Task1/Vec2.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Task1/Vec3.cs" Line="30" Column="45" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,15 +26,13 @@
           <Node name="Task1" expanded="True">
             <Node name="Task1" expanded="True">
               <Node name="Creators" expanded="True" />
-              <Node name="Factories" expanded="True">
-                <Node name="A" expanded="True" />
-              </Node>
+              <Node name="Factories" expanded="True" />
               <Node name="Products" expanded="True">
                 <Node name="Animation" expanded="True" />
-                <Node name="Mesh" expanded="True" />
-                <Node name="Sprite" expanded="True" />
+                <Node name="Button" expanded="True" />
+                <Node name="CheckBox" expanded="True" />
               </Node>
-              <Node name="Vec2.cs" selected="True" />
+              <Node name="Vec3.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -45,10 +42,11 @@
   <MonoDevelop.Ide.ItemProperties.Task1 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Debugger.DebugSourceFolders />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/iljajurchenko/Dev/Edu/NETObjectTech/Task1/Task1/README.txt" relfile="Task1/README.txt" line="2" column="1" />
-      <Breakpoint file="/Users/iljajurchenko/Dev/Edu/NETObjectTech/Task1/Task1/Test.cs" relfile="Task1/Test.cs" line="107" column="1" />
+      <Breakpoint file="/Users/iljajurchenko/Dev/Edu/NETObjectTech/Task1/Task1/Products/Sprite/Sprite2D.cs" relfile="Task1/Products/Sprite/Sprite2D.cs" line="86" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

@@ -27,13 +27,30 @@ namespace Task1.Products.Sprite
 
         public Sprite2D()
         {
+            _pos = new Vec2(0.0f, 0.0f);
+            _rot = 0.0f;
+            _texture = "NaN";
         }
 
         public void Init(Hashtable table)
         {
-            _rot = (float)table["rot"];
-            _pos = (Vec2)table["pos"];
-            _texture = (String)table["texture"];
+            object rot = null;
+            object pos = null;
+            object text = null;
+
+            if ((rot = table["rot"]) != null)
+            {
+                _rot = (float)rot;
+            }
+            else if((pos = table["pos"]) != null)
+            {
+                Vec2 p = (Vec2)pos;
+                _pos = p.Clone();
+            }
+            else if((text = table["texture"]) != null)
+            {
+                _texture = (String)text;
+            }
         }
 
         public ISprite Clone()

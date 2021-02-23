@@ -69,6 +69,8 @@ namespace Task1
             Test_D_E_2D();
             Test_D_E_3D();
             Test_Creator();
+            Test_Creator_1();
+            System.Console.WriteLine("--------END_OF_TESTS--------");
         }
 
         public void Test_A()
@@ -141,6 +143,34 @@ namespace Task1
             });
 
             bool AreEqual = sprite_0.Equals(sprite_1);
+            System.Console.WriteLine($"[TEST CREATOR] [{AreEqual.ToString().ToUpper()}]");
+        }
+
+        public void Test_Creator_1()
+        {
+            CreatorFactory fac = new CreatorFactory();
+
+            object sprite_0 = fac.Assemble(typeof(Sprite2D), new Hashtable(){});
+            object sprite_1 = fac.Assemble(typeof(Sprite3D), new Hashtable(){});
+
+            object mesh_0 = fac.Assemble(typeof(Mesh2D), new Hashtable() {});
+            object mesh_1 = fac.Assemble(typeof(Mesh3D), new Hashtable() {});
+
+            object checkBox_0 = fac.Assemble(typeof(CheckBox2D), new Hashtable() {});
+            object checkBox_1 = fac.Assemble(typeof(CheckBox3D), new Hashtable() {});
+
+            object button_0 = fac.Assemble(typeof(Button2D), new Hashtable() {});
+            object button_1 = fac.Assemble(typeof(Button3D), new Hashtable() {});
+
+            object anim_0 = fac.Assemble(typeof(Anim2D), new Hashtable() {});
+            object anim_1 = fac.Assemble(typeof(Anim3D), new Hashtable() {});
+
+            bool AreEqual = sprite_0 != null && sprite_1 != null &&
+                            mesh_0 != null && mesh_1 != null &&
+                            checkBox_0 != null && checkBox_1 != null &&
+                            button_0 != null && button_1 != null &
+                            anim_0 != null && anim_1 != null;
+
             System.Console.WriteLine($"[TEST CREATOR] [{AreEqual.ToString().ToUpper()}]");
         }
     }

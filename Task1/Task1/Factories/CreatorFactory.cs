@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using System.Reflection;
+using System.Diagnostics;
 
 using Task1.Creators;
 
@@ -21,6 +22,9 @@ namespace Task1.Factories
     {
         Dictionary<Type, Creator<IMesh>> MeshCreators = new Dictionary<Type, Creator<IMesh>>();
         Dictionary<Type, Creator<ISprite>> SpriteCreators = new Dictionary<Type, Creator<ISprite>>();
+        Dictionary<Type, Creator<ICheckBox>> CheckBoxCreators = new Dictionary<Type, Creator<ICheckBox>>();
+        Dictionary<Type, Creator<IButton>> ButtonCreators = new Dictionary<Type, Creator<IButton>>();
+        Dictionary<Type, Creator<IAnimation>> AnimCreators = new Dictionary<Type, Creator<IAnimation>>();
 
         Hashtable Creators = new Hashtable();
 
@@ -28,11 +32,24 @@ namespace Task1.Factories
         {
             Creators.Add(typeof(IMesh), MeshCreators);
             Creators.Add(typeof(ISprite), SpriteCreators);
+            Creators.Add(typeof(ICheckBox), CheckBoxCreators);
+            Creators.Add(typeof(IButton), ButtonCreators);
+            Creators.Add(typeof(IAnimation), AnimCreators);
 
             RegisterType<IMesh, Mesh2D>();
             RegisterType<IMesh, Mesh3D>();
+
             RegisterType<ISprite, Sprite2D>();
             RegisterType<ISprite, Sprite3D>();
+
+            RegisterType<ICheckBox, CheckBox2D>();
+            RegisterType<ICheckBox, CheckBox3D>();
+
+            RegisterType<IButton, Button2D>();
+            RegisterType<IButton, Button3D>();
+
+            RegisterType<IAnimation, Anim2D>();
+            RegisterType<IAnimation, Anim3D>();
         }
 
         public void RegisterType<T,C>()
@@ -40,6 +57,7 @@ namespace Task1.Factories
             where C : T, new()
         {
             Dictionary<Type, Creator<T>> familyOfCreators = (Dictionary<Type, Creator<T>>)Creators[typeof(T)];
+            Debug.Assert(familyOfCreators != null, "Creator not registered");
             Creator<T> creator = new ConcreteCreator<T, C>();
             familyOfCreators.Add(typeof(C), creator);
         }
@@ -49,6 +67,7 @@ namespace Task1.Factories
             where C : T, new()
         {
             Dictionary<Type, Creator<T>> familyOfCreators = (Dictionary<Type, Creator<T>>)Creators[typeof(T)];
+            Debug.Assert(familyOfCreators != null, "Creator not registered");
             return familyOfCreators[typeof(C)].Create(param);
         }
 

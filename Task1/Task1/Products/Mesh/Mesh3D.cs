@@ -20,10 +20,23 @@ namespace Task1.Products.Mesh
 
         public void Init(Hashtable table)
         {
-            _points = new List<Vec3>((List<Vec3>)table["points"]);
-            _color = (Color)table["color"];
-            Transform trans = (Transform)table["transform"];
-            _transform = trans.Clone();
+            object points = null;
+            object color = null;
+            object transform = null;
+
+            if ((points = table["points"]) != null)
+            {
+                _points = new List<Vec3>((List<Vec3>)points);
+            }
+            else if((transform = table["transform"]) != null)
+            {
+                Transform trans = (Transform)transform;
+                _transform = trans.Clone();
+            }
+            else if((color = table["color"]) != null)
+            {
+                _color = (Color)color;
+            }
         }
 
         public IMesh Clone()
