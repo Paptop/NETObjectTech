@@ -15,3 +15,16 @@
     9) Kokia produktų šeima naudojama, turi priklausyti nuo programos komandinės eilutės argumento, kurio reikšmė yra šeimos pavadinimas ("A", ..., "E").
 
 
+
+Changes.
+
+1) Implemented the changes stated after the review
+
+2) Added ProductionUniClone, which is an example of deep cloning, also fixed recursion in my solution. But my solution is limited, compared to production code, because
+it does not support collections and multidimensional arrays. Also, showed a more hack way to deep clone in C# in UniversalClone.cs .
+
+3) Added standart cloning, using protected constructors
+
+4) Added Test.cs for checking and showing cloning
+
+

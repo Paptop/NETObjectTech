@@ -35,9 +35,9 @@ namespace Task1.Interfaces
                     {
                         continue;
                     }
-                    else if(fieldValue == obj)
+                    else if(fieldValue == obj) //Fix for recursion
                     {
-                        field.SetValue(toret, toret);
+                        field.SetValue(toret, toret); 
                         continue;
                     }
 
