@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{B94F47EC-4E2B-40A7-9E85-876F62CC27B2}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Task1" expanded="True">
+            <Node name="Task1" expanded="True">
+              <Node name="Creators" expanded="True" />
+              <Node name="Factories" expanded="True" />
+              <Node name="Interfaces" expanded="True" />
+              <Node name="Products" expanded="True">
+                <Node name="A" expanded="True" />
+                <Node name="B" expanded="True">
+                  <Node name="WinButton.cs" selected="True" />
+                </Node>
+                <Node name="C" expanded="True" />
+                <Node name="D" expanded="True" />
+                <Node name="E" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Task1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

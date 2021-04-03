@@ -7,15 +7,13 @@
 
   <ItemGroup>
     <Folder Include="Products\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Products\B\" />
+    <Folder Include="Products\C\" />
+    <Folder Include="Products\D\" />
+    <Folder Include="Products\E\" />
     <Folder Include="Factories\" />
-    <Folder Include="Products\Animation\" />
-    <Folder Include="Products\CheckBox\" />
-    <Folder Include="Products\Mesh\" />
-    <Folder Include="Products\Sprite\" />
-    <Folder Include="Products\Button\" />
-    <Folder Include="Factories\A\" />
-    <Folder Include="Factories\B-C\" />
-    <Folder Include="Factories\D-E\" />
+    <Folder Include="Products\A\" />
     <Folder Include="Creators\" />
   </ItemGroup>
 </Project>

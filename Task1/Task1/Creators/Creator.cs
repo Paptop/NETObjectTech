@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections;
-
 namespace Task1.Creators
 {
-    public abstract class Creator<Type> where Type : class
+    public abstract class Creator<T>
     {
         public Creator()
         {
         }
 
-        public abstract Type Create(Hashtable param);
+        public abstract T Create();
     }
 }

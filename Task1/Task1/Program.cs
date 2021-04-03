@@ -1,55 +1,46 @@
 ﻿using System;
 using System.Reflection;
-using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 
-using Task1.Products.Button;
-using Task1.Products.Mesh;
-using Task1.Products.CheckBox;
-using Task1.Products.Sprite;
+using Task1.Products;
+using Task1.Interfaces;
+using Task1.Creators;
+
+using Task1.Products.A;
+using Task1.Products.B;
+using Task1.Products.C;
+using Task1.Products.D;
+using Task1.Products.E;
+
 using Task1.Factories;
-
 
 namespace Task1
 {
     class Program
     {
-        private static CreatorFactory  factory = new CreatorFactory();
-        private static Dictionary<string, string> AcceptedTypes = new Dictionary<string, string>()
+        private static Dictionary<string, IFactory> AcceptedTypes = new Dictionary<string, IFactory>()
         {
-            {"Sprite2D", "Task1.Products.Sprite.Sprite2D" },
-            {"Sprite3D", "Task1.Products.Sprite.Sprite3D" },
+            {"A",  new FactoryA(743813,0.0f,1.0f)},
 
-            {"Mesh2D", "Task1.Products.Mesh.Mesh2D" },
-            {"Mesh3D", "Task1.Products.Mesh.Mesh3D" },
+            {"B",  new FactoryBC(typeof(WinButton),typeof(WinCheckBox),0)},
 
-            {"CheckBox2D", "Task1.Products.CheckBox.CheckBox2D" },
-            {"CheckBox3D", "Task1.Products.CheckBox.CheckBox3D" },
+            {"C",  new FactoryBC(typeof(WebButton), typeof(WebCheckBox), 0)},
 
-            {"Button2D", "Task1.Products.Button.Button2D"},
-            {"Button3D", "Task1.Products.Button.Button3D" },
+            {"D",  new FactoryDE(new AndroidButton(), new AndroidCheckBox())},
 
-            {"Anim2D", "Task1.Products.Animation.Anim2D" },
-            {"Anim3D", "Task1.Products.Animation.Anim3D" }
+            {"E",  new FactoryDE(new IOSButton(), new IOSCheckBox())},
         };
 
-        static Object Create(string type)
+
+        static IFactory GetFactory(string type)
         {
-            string fullType = "";
-            if(!AcceptedTypes.TryGetValue(type,out fullType))
+            IFactory factory = null;
+            if (!AcceptedTypes.TryGetValue(type, out factory))
             {
                 throw new ArgumentException($"Wrong type {type}");
             }
 
-            Type ctype = Type.GetType(fullType);
-            return factory.Assemble(ctype, new Hashtable(){});
-        }
-
-        static void Main(string[] args)
-        {
-            Test test = new Test();
-            HandleArgument(args);
+            return factory;
         }
 
         static void HandleArgument(string[] args)
@@ -60,13 +51,81 @@ namespace Task1
                 {
                     throw new ArgumentException("Bad argument count");
                 }
-                System.Console.WriteLine($"Assembled object : {Create(args[0])}");
+
+                IFactory factory = GetFactory(args[0]);
+
+                System.Console.Write("Enter canvas name: ");
+                String canvas = System.Console.ReadLine();
+                IButton button = factory.CreateButton(canvas);
+                ICheckBox check = factory.CreateCheckBox(canvas);
+
+                System.Console.WriteLine(button);
+                System.Console.WriteLine(check);
             }
-            catch(ArgumentException earg)
+            catch (ArgumentException earg)
             {
                 System.Console.WriteLine($"{earg}\n[MSG] Passed argument via command line is invalid");
                 System.Environment.Exit(1);
             }
+        }
+
+        static void Main(string[] args)
+        {
+            /*
+             * More checs, examples in Test.cs with specific initializations
+             */
+            Test test = new Test();
+            System.Console.WriteLine("[TEST_REC]" + test.TestRecursiveClone());
+            System.Console.WriteLine("[TEST_PRODUCTION]" + test.TestProduction());
+            System.Console.WriteLine("[TEST_PRODUCTION_2]" + test.TestProduction2());
+            System.Console.WriteLine("[TEST_CLONE_0]" + test.TestAndroidButtonClone());
+
+            HandleArgument(args);
+            System.Console.WriteLine("-----------------");
+            CreatorExample_0();
+            System.Console.WriteLine("-----------------");
+            CreatorExample_1();
+        }
+
+
+        static void CreatorExample_0()
+        {
+            System.Console.Write("Enter canvas name: ");
+            String canvas = System.Console.ReadLine();
+            Creator<IButton> button = new CreatorUnixButton(canvas, 0, 0.0f, 0.0f);
+            Creator<ICheckBox> checkBox = new CreatorUnixCheckBox(canvas, 0, 0.0f, 0.0f);
+            CreatorFactory factory = new CreatorFactory(button, checkBox);
+
+
+            System.Console.WriteLine(factory.CreateButton());
+            System.Console.WriteLine(factory.CreateCheckBox());
+        }
+
+        static void CreatorExample_1()
+        {
+            object[] args = new object[2];
+            string canvas = "default";
+
+            System.Console.Write("Enter canvas name: ");
+            canvas = System.Console.ReadLine();
+
+            args[0] = canvas; //THE ARGUMENT IS PASSED HERE
+
+            int window = 0;
+            System.Console.Write("Enter window id: ");
+            String id = System.Console.ReadLine();
+            if(!Int32.TryParse(id, out window))
+            {
+                System.Console.WriteLine("Using id 0");
+            }
+            args[1] = window; //THE ARGUMENT IS PASSED HERE
+
+            Creator<IButton> button = new UniversalCreator<IButton, WinButton>(args);
+            Creator<ICheckBox> checkBox = new UniversalCreator<ICheckBox, WebCheckBox>(null);
+            CreatorFactory factory = new CreatorFactory(button, checkBox);
+
+            System.Console.WriteLine(factory.CreateButton());
+            System.Console.WriteLine(factory.CreateCheckBox());
         }
     }
 }

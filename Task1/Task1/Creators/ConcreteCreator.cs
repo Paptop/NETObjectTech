@@ -1,24 +1,19 @@
 ﻿using System;
-using System.Collections;
-
-using Task1.Products;
-
 namespace Task1.Creators
 {
-    public class ConcreteCreator<Type,ConcreteType> : Creator<Type>
-        where Type : class
-        where ConcreteType : Type, new()
+    public class UniversalCreator<T, CT> : Creator<T>
     {
-        public ConcreteCreator()
+        private Object[] _args = null;
+
+        public UniversalCreator(Object[] arg)
         {
+            _args = arg;
         }
 
-        public override Type Create(Hashtable param)
+        public override T Create()
         {
-            ConcreteType obj = new ConcreteType();
-            IInitializable iobj = (IInitializable)obj;
-            iobj.Init(param);
-            return obj;
+            var instance = (T)Activator.CreateInstance(typeof(CT), _args);
+            return instance;
         }
     }
 }
