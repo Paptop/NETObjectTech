@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Task5.Classic.Components.Leafs.Mesh">
+    <Position X="0.5" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classic\Components\Leafs\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Classic.Components.Leafs.Particle">
+    <Position X="8.25" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classic\Components\Leafs\Particle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Classic.Components.Leafs.Scene">
+    <Position X="3" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classic\Components\Leafs\Scene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Classic.Components.Leafs.Sprite">
+    <Position X="5.75" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classic\Components\Leafs\Sprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Classic.Components.Node">
+    <Position X="4.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classic\Components\Node.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Classic.Components.Node2D">
+    <Position X="7" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classic\Components\Node2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Classic.Components.Node3D">
+    <Position X="2.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classic\Components\Node3D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Classic.Visitors.RenderVisitor">
+    <Position X="11.25" Y="2.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classic\Visitors\RenderVisitor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Task5.Reflection.Components.Leafs.DummyNoStaticalDependence" Collapsed="true">
+    <Position X="1.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reflection\Components\Leafs\DummyNoStaticalDependence.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Reflection.Components.Leafs.Mesh" Collapsed="true">
+    <Position X="10" Y="7.5" Width="1.5" />
+    <InheritanceLine Type="Task5.Reflection.Components.Node3D" FixedToPoint="true">
+      <Path>
+        <Point X="10.75" Y="7.191" />
+        <Point X="10.75" Y="7.346" />
+        <Point X="10.625" Y="7.346" />
+        <Point X="10.625" Y="7.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reflection\Components\Leafs\Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Reflection.Components.Leafs.Particle" Collapsed="true">
+    <Position X="5.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reflection\Components\Leafs\Particle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Reflection.Components.Leafs.Scene" Collapsed="true">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reflection\Components\Leafs\Scene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Reflection.Components.Leafs.Sprite" Collapsed="true">
+    <Position X="3.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reflection\Components\Leafs\Sprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Reflection.Components.Node" Collapsed="true">
+    <Position X="5.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reflection\Components\Node.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Reflection.Components.Node2D" Collapsed="true">
+    <Position X="4.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reflection\Components\Node2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Reflection.Components.Node3D" Collapsed="true">
+    <Position X="10" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reflection\Components\Node3D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Reflection.Visitors.DynamicCounterVisitor" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="4.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAASACAQAgAAAAAAAAAIAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Reflection\Visitors\DynamicCounterVisitor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.26" Collapsed="true" />
+  </Class>
+  <Class Name="Task5.Reflection.Visitors.ReflectionSerializeVisitor" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="2.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reflection\Visitors\ReflectionSerializeVisitor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Task5.Classic.Visitors.IVisitor">
+    <Position X="11.75" Y="0.5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classic\Visitors\IVisitor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
